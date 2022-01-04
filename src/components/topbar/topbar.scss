@@ -15,12 +15,15 @@
         justify-content: space-between;
 
         .left{
+            display: flex;
+            align-items: center;
 
             .logo{
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
+                margin-right: 40px;
             }
         }
     }
