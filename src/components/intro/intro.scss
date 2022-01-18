@@ -9,8 +9,8 @@
         overflow: hidden;
         
         .imgContainer{
-            width: 700px;
-            height: 700px;
+            width: 800px;
+            height: 800px;
             background-color: $semiColor;
             border-radius: 50%;
             display: flex;
@@ -20,6 +20,7 @@
 
             img{
                 height: 100%;
+                width: 100%;
             }
         }
     }
