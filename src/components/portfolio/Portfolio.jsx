@@ -1,63 +1,82 @@
+import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
+import {
+    featuredPortfolio,
+    javascriptPortfolio,
+    nodejsPortfolio,
+    reactPortfolio,
+    scssPortfolio
+} from "../../data";
 
 export default function Portfolio() {
-
+    const [selected, setSelected] = useState('featured');
+    const [data, setData] = useState([]);
     const list = [
         {
             id: "featured",
             title: "Featured",
         },
         {
-            id: "web",
-            title: "Web App",
+            id: "javascript",
+            title: "Javascript App",
         },
         {
-            id: "mobile",
-            title: "Mobile App",
+            id: "nodejs",
+            title: "Node.js App",
         },
         {
-            id: "design",
-            title: "Design",
+            id: "react",
+            title: "React App",
         },
         {
-            id: "content",
-            title: "Content",
+            id: "scss",
+            title: "SCSS App",
         },
     ];
+
+    useEffect(() => {
+
+        switch (selected) {
+            case "featured":
+                setData(featuredPortfolio);
+                break;
+            case "javascript":
+                setData(javascriptPortfolio);
+                break;
+            case "nodejs":
+                setData(nodejsPortfolio);
+                break;
+            case "react":
+                setData(reactPortfolio);
+                break;
+            case "scss":
+                setData(scssPortfolio);
+                break;
+        }
+
+    }, [selected])
+
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
             <ul>
                 {list.map((item) => (
-                    <PortfolioList title={item.title} />
+                    <PortfolioList
+                        title={item.title}
+                        active={selected === item.id}
+                        setSelected={setSelected}
+                        id={item.id}
+                    />
                 ))}
             </ul>
             <div className="container">
-                <div className="item">
-                    <img src="assets/projects/code-quiz-app.jpg" alt="code quiz img" />
-                    <h3>Code Quiz App</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/projects/code-quiz-app.jpg" alt="code quiz img" />
-                    <h3>Code Quiz App</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/projects/code-quiz-app.jpg" alt="code quiz img" />
-                    <h3>Code Quiz App</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/projects/code-quiz-app.jpg" alt="code quiz img" />
-                    <h3>Code Quiz App</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/projects/code-quiz-app.jpg" alt="code quiz img" />
-                    <h3>Code Quiz App</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/projects/code-quiz-app.jpg" alt="code quiz img" />
-                    <h3>Code Quiz App</h3>
-                </div>
+                {data.map(d => (
+                    <div className="item">
+                        <img src={d.img} />
+                        <h3>{d.title}</h3>
+                    </div>
+                ))}
             </div>
         </div>
     )
