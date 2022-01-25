@@ -19,7 +19,7 @@ export default function Resume() {
             title: "Title 2",
             img:
                 "https://media-exp1.licdn.com/dms/image/D5635AQGrW-y4LFi8fg/profile-framedphoto-shrink_200_200/0/1642492451698?e=1643176800&v=beta&t=k7V96Evikji0kzb9USWTVO2ewfwYDCJY6734SIwHtVo",
-            icon: "assets/youtube.png",
+            icon: "assets/github.png",
             desc:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
             featured: true,
