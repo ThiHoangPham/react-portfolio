@@ -1,5 +1,5 @@
 import "./topbar.scss";
-import { Person, Mail, GitHub, LinkedIn } from "@material-ui/icons"
+import { Person, GitHub, LinkedIn } from "@material-ui/icons"
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
     return (

@@ -2,11 +2,12 @@ import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
 import Works from "./components/works/Works";
-import Others from "./components/others/Resume";
+import Others from "./components/resume/Resume";
 import Contact from "./components/contact/Contact";
 import "./app.scss"
 import { useState } from "react"
 import Menu from "./components/menu/Menu";
+import Resume from "./components/resume/Resume";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
@@ -17,7 +18,7 @@ function App() {
         <Intro />
         <Portfolio />
         <Works />
-        <Others />
+        <Resume />
         <Contact />
       </div>
     </div>
