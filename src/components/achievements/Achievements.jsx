@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./works.scss"
+import "./achievements.scss"
 
 export default function Works() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,6 +41,7 @@ export default function Works() {
 
     return (
         <div className="works" id="works">
+            <h1>Achievements And Certifications</h1>
             <div
                 className="slider"
                 style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
