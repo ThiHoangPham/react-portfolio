@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.works {
+.achievements {
   background-color: $semiColor;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@
       justify-content: center;
 
       .item {
-        width: 700px;
+        width: 800px;
         height: 100%;
         background-color: white;
         border-radius: 20px;
@@ -71,7 +71,7 @@
 
         @include mobile{
           width: 80%;
-          height: 150px;
+          height: 200px;
           margin: 15px 0;
         }
 
@@ -95,39 +95,41 @@
           }
 
             .imgContainer {
-              width: 40px;
-              height: 40px;
+              width: 80px;
+              height: 80px;
               border-radius: 50%;
               background-color: $semiColor;
               display: flex;
               align-items: center;
               justify-content: center;
+              margin: auto;
 
               @include mobile{
-                width: 20px;
-                height: 20px;
+                width: 35px;
+                height: 35px;
             }
 
               img {
-                width: 25px;
+                width: 65px;
 
                 @include mobile{
-                  width: 15px;
+                  width: 30px;
               }
                 }
               }
             }
             h2 {
-              font-size: 20px;
+              font-size: 18px;
 
               @include mobile{
-                font-size: 13px;
+                font-size: 12px;
             }
             }
             p {
               font-size: 13px;
 
               @include mobile{
+                font-size: 10px;
                 overflow: hidden;
             }
               }
@@ -149,8 +151,8 @@
           overflow: hidden;
 
           img {
-            width: 400px;
-            transform: rotate(-10deg);
+              height: 100%;
+              width: 100%;
           }
         }
       }

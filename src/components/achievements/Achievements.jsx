@@ -1,35 +1,26 @@
 import { useState } from "react";
 import "./achievements.scss"
 
-export default function Works() {
+export default function Achievements() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const data = [
         {
             id: "1",
-            icon: "./assets/mobile.png",
-            title: "abc",
+            icon: "./assets/bage.png",
+            title: "UWA CODING BOOTCAMP",
             desc:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+                "A new professional web development course that aims to meet the rising demand for job-ready tech talent is be launched by The University of Western Australia.",
             img:
-                "https://i.pinimg.com/originals/f6/28/b7/f628b79ea9ba959fcd5196a21df95497.jpg",
+                "./assets/achievements/uwa-bootcamp-certificate.png",
         },
         {
             id: "2",
-            icon: "./assets/globe.png",
-            title: "abc",
+            icon: "./assets/bage.png",
+            title: "UDEMY MODERN JAVASCRIPT COURSE",
             desc:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                "The most complete JavaScript course on Udemy. It take you from the very fundamentals of JavaScript, all the way to building modern and complex applications.",
             img:
-                "https://i.pinimg.com/originals/f6/28/b7/f628b79ea9ba959fcd5196a21df95497.jpg",
-        },
-        {
-            id: "3",
-            icon: "./assets/writing.png",
-            title: "abc",
-            desc:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            img:
-                "https://i.pinimg.com/originals/f6/28/b7/f628b79ea9ba959fcd5196a21df95497.jpg",
+                "./assets/achievements/udemy-javascript-certificate.png",
         },
     ];
 
@@ -40,7 +31,7 @@ export default function Works() {
     };
 
     return (
-        <div className="works" id="works">
+        <div className="achievements" id="achievements">
             <h1>Achievements And Certifications</h1>
             <div
                 className="slider"
@@ -56,7 +47,6 @@ export default function Works() {
                                     </div>
                                     <h2>{d.title}</h2>
                                     <p>{d.desc}</p>
-                                    <span>Lean more...</span>
                                 </div>
                             </div>
                             <div className="right">

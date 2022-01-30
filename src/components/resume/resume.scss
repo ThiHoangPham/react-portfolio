@@ -70,18 +70,23 @@
                 img{
                     &.left,
                     &.right{
-                        height: 25px;
+                        height: 40px;
+                        
+                        @include mobile{
+                            width: 25px;
+                            height: 25px;
+                        }
                     }
                     &.user{
-                        height: 60px;
-                        width: 60px;
+                        height: 110px;
+                        width: 110px;
                         border-radius: 50%;
                         object-fit: cover;
                         margin: 0 30px;
 
                         @include mobile{
-                            width: 30px;
-                            height: 30px;
+                            width: 35px;
+                            height: 35px;
                         }
                     }
                 }
@@ -109,6 +114,26 @@
 
                     @include mobile{
                         font-size: 14px; 
+                    }
+                }
+
+                button{
+                    width: 150px;
+                    height: 30px;
+                    color: white;
+                    background-color: $primaryColor;
+                    border: none;
+                    border-radius: 10px;
+                    font-weight: 700;
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        overflow: hidden;
+                    }
+    
+                    &.focus{
+                        outline: none;
                     }
                 }
 
