@@ -37,7 +37,7 @@ export default function Portfolio() {
 
     useEffect(() => {
 
-        switch (selected) {
+        switch(selected) {
             case "featured":
                 setData(featuredPortfolio);
                 break;
@@ -53,6 +53,8 @@ export default function Portfolio() {
             case "scss":
                 setData(scssPortfolio);
                 break;
+
+            default:
         }
 
     }, [selected])
@@ -73,9 +75,9 @@ export default function Portfolio() {
             <div className="container">
                 {data.map(d => (
                     <div className="item">
-                        <img src={d.img} />
+                        <img src={process.env.PUBLIC_URL + d.img} alt="projects img" />
                         <p>{d.desc}</p>
-                        <button><a href={d.src} target="_blank">Learn more...</a></button>
+                        <button><a href={d.src} target="_blank" rel="noreferrer">Learn more...</a></button>
                     </div>
                 ))}
             </div>

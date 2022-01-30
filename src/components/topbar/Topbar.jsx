@@ -13,11 +13,11 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                     </div>
                     <div className="itemContainer">
                         <GitHub className="icon" />
-                        <a href="https://github.com/ThiHoangPham" target="_blank"><span>thihoangpham</span></a>
+                        <a href="https://github.com/ThiHoangPham" target="_blank" rel="noreferrer"><span>thihoangpham</span></a>
                     </div>
                     <div className="itemContainer">
                         <LinkedIn className="icon" />
-                        <a href="https://www.linkedin.com/in/thaihoangpham/" target="_blank"><span>thaihoangpham</span></a>
+                        <a href="https://www.linkedin.com/in/thaihoangpham/" target="_blank" rel="noreferrer"><span>thaihoangpham</span></a>
                     </div>
                 </div>
                 <div className="right">

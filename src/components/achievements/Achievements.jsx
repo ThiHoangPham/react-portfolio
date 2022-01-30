@@ -6,21 +6,21 @@ export default function Achievements() {
     const data = [
         {
             id: "1",
-            icon: "./assets/bage.png",
+            icon: "/assets/bage.png",
             title: "UWA CODING BOOTCAMP",
             desc:
                 "A new professional web development course that aims to meet the rising demand for job-ready tech talent is be launched by The University of Western Australia.",
             img:
-                "./assets/achievements/uwa-bootcamp-certificate.png",
+                "/assets/achievements/uwa-bootcamp-certificate.png",
         },
         {
             id: "2",
-            icon: "./assets/bage.png",
-            title: "UDEMY MODERN JAVASCRIPT COURSE",
+            icon: "/assets/bage.png",
+            title: "UDEMY MODERN JAVASCRIPT",
             desc:
                 "The most complete JavaScript course on Udemy. It take you from the very fundamentals of JavaScript, all the way to building modern and complex applications.",
             img:
-                "./assets/achievements/udemy-javascript-certificate.png",
+                "/assets/achievements/udemy-javascript-certificate.png",
         },
     ];
 
@@ -43,28 +43,27 @@ export default function Achievements() {
                             <div className="left">
                                 <div className="leftContainer">
                                     <div className="imgContainer">
-                                        <img src={d.icon} />
+                                        <img src={process.env.PUBLIC_URL + d.icon} alt="icon img" />
                                     </div>
                                     <h2>{d.title}</h2>
                                     <p>{d.desc}</p>
                                 </div>
                             </div>
                             <div className="right">
-                                <img
-                                    src={d.img} />
+                                <img src={process.env.PUBLIC_URL + d.img} alt="certificate img" />
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
             <img
-                src="assets/arrow.png"
+                src={process.env.PUBLIC_URL +"/assets/arrow.png"}
                 className="arrow left"
                 alt=""
                 onClick={() => handleClick("left")}
             />
             <img
-                src="assets/arrow.png"
+                src={process.env.PUBLIC_URL +"/assets/arrow.png"}
                 className="arrow right"
                 alt=""
                 onClick={() => handleClick()}

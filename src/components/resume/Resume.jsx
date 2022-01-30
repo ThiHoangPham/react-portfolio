@@ -8,10 +8,10 @@ export default function Resume() {
             name: "Technical skills.",
             title: "Full Stack Developer.",
             img:
-                "assets/man2.png",
-            rightIcon: "assets/facebook.png",
+                "/assets/man2.png",
+            rightIcon: "/assets/facebook.png",
             rightSrc: "https://www.facebook.com/adamthaihoang/",
-            leftIcon: "assets/twitter.png",
+            leftIcon: "/assets/twitter.png",
             leftSrc: "https://twitter.com/AdamThaiHoang1",
             firstDesc:
                 "FROND-END: HTML5. CSS3. SASS. JAVASCRIPT. REACT. GITHUB. HEROKU. BOOTSTRAP",
@@ -23,10 +23,10 @@ export default function Resume() {
             name: "About me.",
             title: "I am Adam.",
             img:
-                "assets/man1.png",
-            rightIcon: "assets/github.png",
+                "/assets/man1.png",
+            rightIcon: "/assets/github.png",
             rightSrc: "https://github.com/ThiHoangPham",
-            leftIcon: "assets/stackoverflow.png",
+            leftIcon: "/assets/stackoverflow.png",
             leftSrc: "https://stackoverflow.com/users/16582425/adam-thai-hoang",
             firstDesc:
                 "...Having almost six years working in Supermarkets Industry, I am taking the opportunity to start learning IT skills again...",
@@ -39,12 +39,12 @@ export default function Resume() {
             name: "My Resume.",
             title: "Download here.",
             img:
-                "assets/man3.png",
-            rightIcon: "assets/linkedin.png",
+                "/assets/man3.png",
+            rightIcon: "/assets/linkedin.png",
             rightSrc: "https://www.linkedin.com/in/thaihoangpham/",
-            leftIcon: "assets/indeed.png",
+            leftIcon: "/assets/indeed.png",
             leftSrc: "https://my.indeed.com/p/phamt-jdbzpw2",
-            resumeSrc: "assets/resume-updated-2.0.pdf",
+            resumeSrc: "/assets/resume-updated-2.0.pdf",
             firstDesc:
                 "UWA CODING BOOTCAMP(2021-2022): Full Stack Developer.",
             secondDesc:
@@ -59,9 +59,9 @@ export default function Resume() {
                 {data.map(d => (
                     <div className={d.featured ? "card featured" : "card"}>
                         <div className="top">
-                            <a href={d.leftSrc} target="_blank"><img src={d.leftIcon} className="left" /></a>
-                            <img className="user" src={d.img} alt="" />
-                            <a href={d.rightSrc} target="_blank"><img className="right" src={d.rightIcon} /></a>
+                            <a href={d.leftSrc} target="_blank" rel="noreferrer"><img src={process.env.PUBLIC_URL + d.leftIcon} alt="icon1 img" className="left" /></a>
+                            <img className="user" src={process.env.PUBLIC_URL + d.img} rel="noreferrer" alt="adam photos" />
+                            <a href={d.rightSrc} target="_blank" rel="noreferrer"><img className="right" src={process.env.PUBLIC_URL + d.rightIcon} alt="icon2 img" /></a>
                         </div>
                         <div className="center">
                             {d.firstDesc}
@@ -71,7 +71,7 @@ export default function Resume() {
                         </div>
                         <div className="bottom">
                             <h3>{d.name}</h3>
-                            <button><a href={d.resumeSrc} target="_blank">{d.title}</a></button>
+                            <button><a href={process.env.PUBLIC_URL + d.resumeSrc} target="_blank" rel="noreferrer">{d.title}</a></button>
                         </div>
                     </div>
                 ))}
