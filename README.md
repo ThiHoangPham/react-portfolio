@@ -148,6 +148,8 @@ This how you can contribute to this project:
   <img alt="profile-github" src="https://img.shields.io/badge/Profile-GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank" />
   <a href="https://thihoangpham.github.io/react-portfolio/">
   <img alt="portfolio-page-latest" src="https://img.shields.io/badge/Portfolio-Page-FEAA2D?style=for-the-badge&logo=deezer&logoColor=white" target="_blank" />
+  <a href="https://www.linkedin.com/in/thaihoangpham/">
+  <img alt="portfolio-page-latest" src="https://img.shields.io/badge/Profile-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
   <a href="mailto:thaihoangpham2008@gmail.com">
   <img alt="email-adam" src="https://img.shields.io/badge/Email to me-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" />
   </br>
